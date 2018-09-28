@@ -82,10 +82,10 @@ class IndexPage extends Component {
       return this.errorMessage(e.message);
     }
 
-    const quadrantButtons = map((quadrant, idx) => (
+    const quadrantButtons = map(quadrant => (
       <div
         key={quadrant.quadrant.name()}
-        className={`button ${idx} full-view`}
+        className={`button ${quadrant.order} full-view`}
       >
         {quadrant.quadrant.name()}
       </div>
