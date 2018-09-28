@@ -2,7 +2,7 @@
 name: "TravisCI"
 ring: "adopt"
 quadrant: "tools"
-isnew: false
+isNew: "false"
 ---
 
 TODO: fill this out

@@ -2,7 +2,7 @@
 name: "Docker"
 ring: "adopt"
 quadrant: "infrastructure"
-isnew: false
+isNew: "false"
 ---
 
 TODO: fill this out

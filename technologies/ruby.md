@@ -2,7 +2,7 @@
 name: "Ruby"
 ring: "hold"
 quadrant: "languages"
-isnew: false
+isNew: "false"
 ---
 
 TODO: fill this out

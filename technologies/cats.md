@@ -1,8 +1,8 @@
 ---
 name: "Cats"
-ring: "asses"
+ring: "assess"
 quadrant: "frameworks"
-isnew: true
+isNew: "true"
 ---
 
 TODO: fill this out

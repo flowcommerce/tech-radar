@@ -2,6 +2,8 @@ module.exports = {
   pathPrefix: `/tech-radar`,
   siteMetadata: {
     title: 'Flow | Tech Radar',
+    siteUrl: 'https://flowcommerce.github.io/tech-radar/',
+    description: 'Insights into the technology and trends shaping Flow',
   },
   plugins: [
     `gatsby-plugin-sass`,

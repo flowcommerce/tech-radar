@@ -172,7 +172,7 @@ const Radar = function (size, radar) {
       maxRadius = ringCalculator.getRadius(i + 1);
 
       var ringBlips = blips.filter(function (blip) {
-        return blip.ring() == ring;
+        return blip.ring() === ring;
       });
 
       var sumRing = ring.name().split('').reduce(function (p, c) {
@@ -289,28 +289,28 @@ const Radar = function (size, radar) {
     var circleKey = "No change";
 
     var container = d3.select('svg').append('g')
-      .attr('class', 'legend legend'+"-"+order);
+      .attr('class', 'legend legend-' + order);
 
     var x = 10;
     var y = 10;
 
 
-    if(order == "first") {
+    if(order === "first") {
       x = 4 * size / 5;
       y = 1 * size / 5;
     }
 
-    if(order == "second") {
+    if(order === "second") {
       x = 1 * size / 5 - 15;
       y = 1 * size / 5 - 20;
     }
 
-    if(order == "third") {
+    if(order === "third") {
       x = 1 * size / 5 - 15;
       y = 4 * size / 5 + 15;
     }
 
-    if(order == "fourth") {
+    if(order === "fourth") {
       x = 4 * size / 5;
       y = 4 * size / 5;
     }
@@ -367,50 +367,17 @@ const Radar = function (size, radar) {
       .style('pointer-events', 'auto');
   }
 
-  function plotRadarHeader() {
-    var header = d3.select('body').insert('header', "#radar");
-    header.append('div')
-      .attr('class', 'radar-title')
-      .append('div')
-      .attr('class', 'radar-title__text')
-      .append('h2')
-      .text(document.title)
-      .style('cursor', 'pointer')
-      .on('click', redrawFullRadar);
-
-    header.select('.radar-title')
-      .append('div')
-      .attr('class', 'radar-title__logo')
-      .html('<a href="https://www.thoughtworks.com"> <img src="images/logo.png" /> </a>');
-
-    return header;
-  }
-
-  function plotQuadrantButtons(quadrants, header) {
+  function plotQuadrantButtons(quadrants) {
 
     function addButton(quadrant) {
       radarElement
         .append('div')
         .attr('class', 'quadrant-table ' + quadrant.order);
-
-
-      header.append('div')
-        .attr('class', 'button ' + quadrant.order + ' full-view')
-        .text(quadrant.quadrant.name())
-        .on('mouseover', mouseoverQuadrant.bind({}, quadrant.order))
-        .on('mouseout', mouseoutQuadrant.bind({}, quadrant.order))
-        .on('click', selectQuadrant.bind({}, quadrant.order, quadrant.startAngle));
     }
 
     each([0, 3, 2, 1], function (i) {
       addButton(quadrants[i]);
     });
-
-
-    header.append('div')
-      .classed('print-radar button no-capitalize', true)
-      .text('Print this radar')
-      .on('click', window.print.bind(window));
   }
 
   function plotRadarFooter() {
@@ -499,9 +466,8 @@ const Radar = function (size, radar) {
 
     rings = radar.rings();
     quadrants = radar.quadrants();
-    var header = plotRadarHeader();
 
-    plotQuadrantButtons(quadrants, header);
+    plotQuadrantButtons(quadrants);
 
     radarElement.style('height', size + 14 + 'px');
     svg = radarElement.append("svg").call(tip);

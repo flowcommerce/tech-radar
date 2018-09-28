@@ -2,7 +2,7 @@
 name: "Scala"
 ring: "adopt"
 quadrant: "languages"
-isnew: false
+isNew: "false"
 ---
 
 TODO: fill this out

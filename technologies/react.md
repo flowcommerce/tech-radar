@@ -2,7 +2,7 @@
 name: "ReactJS"
 ring: "adopt"
 quadrant: "frameworks"
-isnew: false
+isNew: "false"
 ---
 
 TODO: fill this out

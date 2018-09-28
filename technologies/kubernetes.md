@@ -2,7 +2,7 @@
 name: "Kubernetes"
 ring: "trial"
 quadrant: "infrastructure"
-isnew: true
+isNew: "true"
 ---
 
 TODO: fill this out
