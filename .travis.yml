@@ -1,13 +1,21 @@
 language: node_js
 node_js:
-  - '9.0'
+- '9.0'
 cache:
   directories:
-    - ~/.npm
+  - "~/.npm"
+env:
+  global:
+  - SOURCE_DIR="public"
+  - secure: uvX9oBWYRoCAYd694v++0bPbWY7ogn4RRyOAtDU62VX8VJc9CWXr3ohqWKwK2HxNL7hnWsacOSybckVN9uV2b4B3YS3ozU9ruWGuGPnyaN3b0n9cNjnXbL3lvHtrl38ir6+2TXh0Tq1qob007NqqgvuzyNKmTqaNN/d/UUsxiwVrHXfYKt+qo0VdSug6FJ4HQVnW+8X0OaY2tgu2SpVcWiCp7TA9dxWt6bh7pxg6ECJ3SY/RC9qM9ZX4xsAFAd83qF8HZ50TBF0k5bZoujwxf0TL2SGQQi4ByirVD/t2zCDP4WTP4IsXJC0Qu7e+Rs9TF6G5qzSEJlJ1hiHjqbAf+hhQ65DF95e32vRuwtupdmbmOb9BHvg7ucW10kjIF5sxr8MvyZP0uKG4RvPFl8s6+z+pDtqYIvO7uXJtIT3O/AKSwspYIj5QmDsrGRwWB/TYlXgjDGmCjjgL88eAS10yIcSWibtQlrJ2DVYhctA/VOzizko8gdEkuup3Upvdl+1s7Kdl7EFdaPDhPenv/nnuvLjHsn9I9SQ/zzAXe1G1vo6m9VMjbWFiIQmYmUlz3TxkXWkGJxmLQtE8xIqz8pYOdwpiW3qzE2EhsNSSVQwl9oze6cI76UfxOGNO2jCJtiqen2+Hcgp9DJ7DS7y0v7t0oBf4uFpUZNF7q+A2p4DMEh8=
+  - secure: jrpy+nE3J3mKAM89pWxjrGdug4UDyGtkguV8HoDe6Ubb5T6rezDJ1vQq0Bl38vkqI6Vuuv5f6/uffFuuC8v+oQP636B3Ge9yJbqmwN8BCQVn9v6HEhnDyz7FhIrd71G8dHL7LovYKOgS4ib1hKNDgR7H3vkd6s94SQYFa50upO32CqvABGzgrBCf9DmR8tWjeJyzRgIcKdlSCe5E0cwMjHQbMFYBRq5x+38+Fwzf5Pad4eGvPcstaM+6RNRevHG+76oKu5UJ0Hy77JbxUFN8iccNjyIA5SXsx4y9mvNgo5QWf0dVna5M7apzjhvYXsXlecZo4GVyU1YZL8v91p8t52YGHiqolfDz0uUwsqbx9iQeTkgYsZDYu9K1o1CufZ26D427pzTOV8CHEeqeqv3LxJwebacsU+0Pv80cAK2A6Wpn21annhiscEx6lpEjzJsTdJjGrYYxxml4WctbprDeH4cU0N6BZ+Qk3eqRyIfu1q8P1y0KjfSoJsuq086aRiLvCcYQDAccQthLQlxTbEK5DbUNQ6PLLpUfTPYY8EOJxFeKyOT6Bccz7YX+qX1zbB7w99X6QHC1Jv30vptRs3zKQShu1NaL0F1gGJJ/wNicL75e3NUgIHiHs29zaWFmbV6Z0OmXkNkOehkvMJ9vHHd6Cu9qgJoxf00JwqUFM3mfZJc=
 before_install:
-  - npm install -g gatsby-cli
+- openssl aes-256-cbc -K $encrypted_c5b6596d62f5_key -iv $encrypted_c5b6596d62f5_iv -in id_rsa.enc -out id_rsa -d
+- npm install -g gatsby-cli gh-pages-travis
 script:
-  - npm run deploy
+- npm run build
+after_sucess:
+- npm run gh-pages-travis
 branches:
   only:
   - master
