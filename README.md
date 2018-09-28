@@ -1,13 +1,13 @@
-
+<h1 align="center">Flow | Technology Radar</h1>
 <p align="center">
   <a href="https://flow.io">
     <img alt="Flow" src="https://flowcommerce.github.io/tech-radar/static/logo-85b25b0d80ae75a80d510cb43dd2ec56.png" width="60" />
   </a>
 </p>
-<h1 align="center">
+<h2 align="center">
   Insights into the technology and trends shaping Flow
   https://flowcommerce.github.io/tech-radar/
-</h1>
+</h2>
 
 This represents the current thinking about what technologies should be used for various purposes. It's a guide for making technical decisions without having to have the entire team sync up on everything. It also allows you to experiment with new technologies safely by seeing what others have discovered, or not.
 
