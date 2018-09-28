@@ -19,7 +19,7 @@ The Rings are indicators of how fit a technology or technique is for use, and th
 
 1.  **Adopt**
   
-  Technologies here are what we are using consistency across most, if not all, projects & teams. In general, you should use these unless you have a **very** good reason not to. **Not** using technologies here would be a technical risk.
+    Technologies here are what we are using consistency across most, if not all, projects & teams. In general, you should use these unless you have a **very** good reason not to. **Not** using technologies here would be a technical risk.
 
 2.  **Trial**
 
@@ -27,7 +27,7 @@ The Rings are indicators of how fit a technology or technique is for use, and th
 
 3.  **Assess**
 
-   This Indicates that a technology is worth exploring with the goal of understanding how it will affect us. It may be worth investing effort like development spikes or research projects to see if it will have a positive impact on us.
+    This Indicates that a technology is worth exploring with the goal of understanding how it will affect us. It may be worth investing effort like development spikes or research projects to see if it will have a positive impact on us.
 
 4.  **Hold**
 
@@ -39,7 +39,7 @@ Quadrants serve to partition the radar into logical groupings to make it more na
 
 1.  **Languages**
   
-  Programming languages.
+    Programming languages.
 
 2.  **Tools**
 
@@ -47,7 +47,7 @@ Quadrants serve to partition the radar into logical groupings to make it more na
 
 3.  **Infrastructure**
 
-   Things that we build software on top of like cloud providers such as AWS, components such as databases, etc.
+    Things that we build software on top of like cloud providers such as AWS, components such as databases, etc.
 
 4.  **Frameworks**
 
