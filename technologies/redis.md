@@ -1,5 +1,5 @@
 ---
-name: "Redis"
+name: "Redis (AWS Elasticache)"
 ring: "trial"
 quadrant: "infrastructure"
 isNew: "false"

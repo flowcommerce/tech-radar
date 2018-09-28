@@ -1,5 +1,5 @@
 ---
-name: "Akka Lambda"
+name: "AWS Lambda"
 ring: "trial"
 quadrant: "infrastructure"
 isNew: "false"
