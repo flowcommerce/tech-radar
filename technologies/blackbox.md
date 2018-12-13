@@ -1,6 +1,6 @@
 ---
 name: "BlackBox"
-ring: "asses"
+ring: "assess"
 quadrant: "tools"
 isNew: "true"
 ---
